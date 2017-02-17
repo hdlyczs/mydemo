@@ -1,0 +1,21 @@
+.main2>ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 40em;
+	height: 16em;
+	}
+.main2>ul>li {
+	height: 15em;
+	width: 30em;
+	background-color: #ccc;
+	text-align: center;
+	cursor: pointer;
+	}
+.main2>ul>li.roundabout-in-focus {
+	cursor: default;
+	}
+	li span {
+	display: block;
+	padding-top: 6em;
+	}

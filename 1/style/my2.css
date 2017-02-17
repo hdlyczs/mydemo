@@ -1,0 +1,66 @@
+/*图片旋转*/
+@-webkit-keyframes flipOutYtest {
+  from {
+    -webkit-transform: perspective(1400px);
+    transform: perspective(1400px);
+  }
+
+  40% {
+    -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, 60deg);
+    transform: perspective(1400px) rotate3d(0, 1, 0, 60deg);
+    opacity: 1;
+  }
+
+  50% {
+    -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(1400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, 180deg);
+    transform: perspective(1400px) rotate3d(0, 1, 0, 180deg);
+    opacity: 0;
+  }
+}
+
+.test{
+  -webkit-animation: flipOutYtest 0.75s linear;
+  animation: flipOutYtest 0.75s linear;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes flipInYtest {
+  from {
+    -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, -180deg);
+    transform: perspective(1400px) rotate3d(0, 1, 0, -180deg);
+    opacity: 0;
+  }
+
+  50% {
+    -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, -90deg);
+    transform: perspective(1400px) rotate3d(0, 1, 0, -90deg);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: perspective(1400px) rotate3d(0, 1, 0, -60deg);
+    transform: perspective(1400px) rotate3d(0, 1, 0, -60deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: perspective(1400px);
+    transform: perspective(1400px);
+    opacity: 1;
+  }
+}
+
+.test2{
+  -webkit-animation: flipInYtest 0.75s linear;
+  animation: flipInYtest 0.75s linear;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}

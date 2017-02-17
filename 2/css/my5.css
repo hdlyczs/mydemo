@@ -1,0 +1,39 @@
+*{margin: 0;padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+html,body,.container{height: 100%;overflow: hidden;}
+
+/*页底导航部分*/
+nav{width: 100%;height: 40px;background: #555;position: fixed;bottom: 0;}
+nav li{float: left; width: 20%;line-height: 40px;text-align: center;position: relative;}
+nav li a {color: white;letter-spacing: 1px;display: block;width: 100%;height: 100%;}
+.triangle{display: none; position: absolute;bottom: 100%;left: 50%;margin-left: -20px; width: 0;height: 0;border: 20px solid transparent;border-bottom-color: #333;}
+nav li:hover{background: #444;}
+.active{background: #333;}
+.active:hover{background: #333;}
+/*视图窗口部分*/
+.view,.part{width: 100%;height: 100%;position: relative;}
+.part{overflow: hidden;}
+.part:nth-of-type(even){background: #e23a6e;}
+.view{top: 0;left:0; transform: translate(0,0);transition: all .5s ease-in-out;}
+.part .bigtriangle{position: absolute;width: 200px;height: 200px; top: 0;left:50%;margin-left: -100px;background: #e23a6e;transform:translateY(-50%) rotate(45deg);}
+.part:nth-of-type(even) .bigtriangle{background: white;}
+.bigtriangle #font{position: absolute; width: 200px;height: 200px; font-size: 90px;color: white;text-align: center; transform:rotate(-45deg) translateY(50%);}
+.part:nth-of-type(even) .bigtriangle #font{color: #e23a6e;}
+.part h2{width: 100%; position: absolute;top: 30%;text-align: center;font-size: 40px;color:#e23a6e;animation: ysh 2s .2s backwards;}
+@keyframes ysh{0%{transform: translateY(-100px);opacity: 0.1;},100%{transform: translateY(0);opacity: 1;}}
+.part p{position: absolute;width: 100%;text-align: center; top: 45%;color:#e23a6e;font-size: 20px;font-family: tahoma;letter-spacing: 1px;animation: ysp 2s .2s backwards;}
+@keyframes ysp{0%{transform: translateY(100px);opacity: 0.1;},100%{transform: translateY(0);opacity: 1;}}
+.part:nth-of-type(even) h2,.part:nth-of-type(even) p{color: white;}
+@media screen and (max-width: 500px){
+	.part h2{font-size: 30px;}
+	.part p{font-size: 14px;}
+	nav li a{font-size: 10px;}
+	.part .bigtriangle{width: 120px;height: 120px;margin-left: -60px;}
+	.part #font{font-size: 45px;transform:rotate(-45deg) translateY(25%);text-align: center;}
+}
+
+
+
+
+

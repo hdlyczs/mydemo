@@ -1,0 +1,119 @@
+.card-container-2 {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  top: 10px;
+  right: 18px;
+  float: right;
+  cursor: pointer;
+  cursor: hand;
+  color: #666666;
+}
+.card-container-2 .controller {
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: none;
+}
+.card-container-2 .controller.left {
+  left: 0;
+}
+.card-container-2 .controller.right {
+  right: 0;
+}
+.card-container-2 .card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  border-radius: 2px;
+  background-color: salmon;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 90;
+  opacity: .9;
+  text-align: center;
+  line-height: 180px;
+}
+.card-container-2 .card:first-of-type {
+  z-index: 100;
+  opacity: 1;
+}
+.card-container-2 .card:nth-of-type(n+2) {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+.card-container-2:hover .card:first-of-type {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+.card-container-2:hover .card:nth-last-of-type(2) {
+  -webkit-transform: scale(0.8) rotate(-5deg) translateY(-20px);
+          transform: scale(0.8) rotate(-5deg) translateY(-20px);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+.card-container-2:hover .card:last-of-type {
+  -webkit-transform: scale(0.8) rotate(5deg) translateY(-20px);
+          transform: scale(0.8) rotate(5deg) translateY(-20px);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+.card-container-5 {
+  clear: both;
+  float: left;
+  position: relative;
+  top: 15px;
+  left: 30px;
+  width: 195px;
+  height: 180px;
+  cursor: pointer;
+  cursor: hand;
+  color: #793c11;
+}
+.card-container-5 .card {
+  text-align: center;
+  line-height: 180px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  border-radius: 2px;
+  background-color: chocolate;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+.card-container-5 .card:last-of-type {
+  z-index: 80;
+}
+.card-container-5 .card:nth-last-of-type(2) {
+  z-index: 90;
+}
+.card-container-5 .card:first-of-type {
+  z-index: 100;
+}
+.card-container-5:hover .card {
+  border-bottom-left-radius: 10px;
+}
+.card-container-5:hover .card:first-of-type {
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+.card-container-5:hover .card:nth-of-type(2) {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+.card-container-5:hover .card:last-of-type {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
